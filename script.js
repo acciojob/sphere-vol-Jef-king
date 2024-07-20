@@ -1,7 +1,8 @@
 function volume_sphere() {
+	event.preventDefault();
     let r=document.querySelector("#radius").value;
-	let v=4/3*3.14*r*r*r;
-	document.querySelector("#volume").value=v;
+	let v=(4/3)*(22/7)*r*r*r;
+	document.querySelector("#volume").value=v.toFixed(4);
   
 } 
 
