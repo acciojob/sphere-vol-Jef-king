@@ -1,11 +1,13 @@
 function volume_sphere() {
 	event.preventDefault();
+	var v;
     let r=document.querySelector("#radius").value;
 	if(isNaN(r) || r<0){
-		v=NaN
+		v=NaN;
 	}else{
-	let v=(4/3)*Math.PI*Math.pow(r, 3);}
-	document.querySelector("#volume").value=v.toFixed(4);
+	v=(4/3)*Math.PI*Math.pow(r, 3);
+	v=v.toFixed(4);}
+	document.querySelector("#volume").value=v;
   
 } 
 
