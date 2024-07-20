@@ -1,7 +1,10 @@
 function volume_sphere() {
 	event.preventDefault();
     let r=document.querySelector("#radius").value;
-	let v=(4/3)*(22/7)*r*r*r;
+	if(isNaN(r) || r<0){
+		v=NaN
+	}else{
+	let v=(4/3)*Math.PI*Math.pow(r, 3);}
 	document.querySelector("#volume").value=v.toFixed(4);
   
 } 
